@@ -36,6 +36,7 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
     public MyFragmentPageAdapter(FragmentManager fm, Context context) {
         super(fm);
         mContext = context;
+
     }
 
     public void setData(List<BaseFragment> mData) {

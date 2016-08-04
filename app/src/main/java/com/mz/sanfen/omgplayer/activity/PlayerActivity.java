@@ -7,7 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.TableLayout;
 
@@ -16,7 +15,6 @@ import com.mz.sanfen.omgplayer.Settings;
 import com.mz.sanfen.omgplayer.widget.media.AndroidMediaController;
 import com.mz.sanfen.omgplayer.widget.media.IjkVideoView;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 public class PlayerActivity extends AppCompatActivity {
