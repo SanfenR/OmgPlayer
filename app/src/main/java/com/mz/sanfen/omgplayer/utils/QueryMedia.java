@@ -1,6 +1,5 @@
 package com.mz.sanfen.omgplayer.utils;
 
-import com.mz.sanfen.omgplayer.adapter.MediaAdapter;
 import com.mz.sanfen.omgplayer.entity.MediaEntity;
 
 import java.io.File;

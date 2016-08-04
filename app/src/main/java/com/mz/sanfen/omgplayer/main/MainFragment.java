@@ -1,12 +1,9 @@
 package com.mz.sanfen.omgplayer.main;
 
-
 import android.widget.TabHost;
 import android.widget.TextView;
-
 import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.fragment.BaseFragment;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
