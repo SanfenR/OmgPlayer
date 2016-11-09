@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @ViewById(R.id.tl_main)
     TabLayout tl_main;

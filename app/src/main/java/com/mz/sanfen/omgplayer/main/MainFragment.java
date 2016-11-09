@@ -1,11 +1,11 @@
 package com.mz.sanfen.omgplayer.main;
 
 
-import android.support.v4.app.Fragment;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.mz.sanfen.omgplayer.R;
+import com.mz.sanfen.omgplayer.fragment.BaseFragment;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -13,7 +13,7 @@ import org.androidannotations.annotations.ViewById;
 
 
 @EFragment(R.layout.fragment_main)
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
     @ViewById(R.id.th_main)
     TabHost th_main;

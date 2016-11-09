@@ -12,7 +12,7 @@ import org.androidannotations.annotations.EFragment;
  */
 
 @EFragment(R.layout.fragment_setting)
-public class SettingFragment extends Fragment {
+public class SettingFragment extends BaseFragment {
 
 
     public SettingFragment() {
