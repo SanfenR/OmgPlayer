@@ -12,6 +12,7 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,6 +38,7 @@ public class MediaFragment extends BaseFragment {
     @AfterViews
     void initView(){
         mAdapter = new MediaAdapter(getContext());
+        mMediaEntities = new ArrayList<>();
         mMediaEntities.add(new MediaEntity("111.tv", "2:2:2"));
         mMediaEntities.add(new MediaEntity("222.tv", "2:2:2"));
         mMediaEntities.add(new MediaEntity("333.tv", "2:2:2"));
