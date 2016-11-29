@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mz.sanfen.omgplayer.PlayerActivity"
+    tools:showIn="@layout/activity_player">
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/surface" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@id/surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -9,6 +9,8 @@ package com.mz.sanfen.omgplayer.entity;
 public class MediaEntity {
     public String name;
     public String time;
+    public int length;
+    public int id;
 
     public MediaEntity() {
     }
@@ -16,5 +18,12 @@ public class MediaEntity {
     public MediaEntity(String name, String time) {
         this.name = name;
         this.time = time;
+    }
+
+    public MediaEntity(String name, String time, int length, int id) {
+        this.name = name;
+        this.time = time;
+        this.length = length;
+        this.id = id;
     }
 }

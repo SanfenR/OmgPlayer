@@ -2,6 +2,7 @@ package com.mz.sanfen.omgplayer.fragment;
 
 
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.mz.sanfen.omgplayer.R;
@@ -45,7 +46,6 @@ public class MediaFragment extends BaseFragment {
         mMediaEntities.add(new MediaEntity("444.tv", "2:2:2"));
         mAdapter.setDatas(mMediaEntities);
         rv_media.setAdapter(mAdapter);
+        rv_media.setLayoutManager(new LinearLayoutManager(getContext()));
     }
-
-
 }

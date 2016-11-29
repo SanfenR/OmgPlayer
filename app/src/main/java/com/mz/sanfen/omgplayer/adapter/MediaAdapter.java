@@ -33,10 +33,8 @@ public class MediaAdapter  extends BaseRecyclerAdapter<MediaEntity> {
     public void onBind(RecyclerView.ViewHolder viewHolder, int RealPosition, MediaEntity data) {
         if (viewHolder instanceof MediaAdapter.ViewHolder){
             MediaAdapter.ViewHolder vh = (ViewHolder) viewHolder;
-
             vh.tv_title.setText(data.name);
             vh.tv_time.setText(data.time);
-
         }
     }
 
