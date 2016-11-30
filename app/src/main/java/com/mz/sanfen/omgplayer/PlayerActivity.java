@@ -18,7 +18,7 @@ public class PlayerActivity extends AppCompatActivity implements SurfaceHolder.C
     IjkMediaPlayer player;
     SurfaceView surface;
     SurfaceHolder surfaceHolder;
-    String path = "/storage/emulated/0/video.mp4";
+    String path = "/sdcard/video.mp4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class PlayerActivity extends AppCompatActivity implements SurfaceHolder.C
         surfaceHolder = surface.getHolder();
 
         surfaceHolder.addCallback(this);
+
 
     }
 
@@ -84,6 +85,14 @@ public class PlayerActivity extends AppCompatActivity implements SurfaceHolder.C
         }
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        if (player != null){
+            player.stop();
+        }
+    }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
