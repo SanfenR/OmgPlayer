@@ -1,12 +1,11 @@
-package com.mz.sanfen.omgplayer;
+package com.mz.sanfen.omgplayer.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.view.ViewGroup;
 
+import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.adapter.MyFragmentPageAdapter;
 import com.mz.sanfen.omgplayer.fragment.MediaFragment;
 import com.mz.sanfen.omgplayer.fragment.SettingFragment;

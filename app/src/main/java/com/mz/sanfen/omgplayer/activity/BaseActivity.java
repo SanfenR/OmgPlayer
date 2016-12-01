@@ -1,4 +1,4 @@
-package com.mz.sanfen.omgplayer;
+package com.mz.sanfen.omgplayer.activity;
 
 import android.support.v7.app.AppCompatActivity;
 

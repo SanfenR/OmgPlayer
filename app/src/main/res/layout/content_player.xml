@@ -6,17 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.mz.sanfen.omgplayer.PlayerActivity"
+    tools:context="com.mz.sanfen.omgplayer.activity.PlayerActivity"
     tools:showIn="@layout/activity_player">
 
-    <SurfaceView
+
+    <com.mz.sanfen.omgplayer.widget.media.IjkVideoView
+        android:id="@+id/video_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/surface" />
-    
+        android:layout_gravity="center"/>
+
+
     <TextView
         android:id="@+id/title"
-        android:layout_below="@id/surface"
+        android:layout_below="@id/video_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="评论"
