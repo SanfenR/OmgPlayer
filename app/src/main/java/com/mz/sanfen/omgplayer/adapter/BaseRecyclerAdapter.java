@@ -19,7 +19,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
     public static final int TYPE_NORMAL = 0;
     public static final int TYPE_HEADER = 1;
     public static final int TYPE_FOOTER = 2;
-    private List<T> mDatas = new ArrayList<>();
+    protected List<T> mDatas = new ArrayList<>();
     private View mHeaderView, mFooterView;
     private OnItemClickListener mListener;
     protected Context mContext;

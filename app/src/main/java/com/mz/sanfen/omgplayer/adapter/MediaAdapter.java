@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.entity.MediaEntity;
+import com.mz.sanfen.omgplayer.utils.QueryMedia;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author MZ
@@ -30,24 +34,42 @@ public class MediaAdapter  extends BaseRecyclerAdapter<MediaEntity> {
     }
 
     @Override
-    public void onBind(RecyclerView.ViewHolder viewHolder, int RealPosition, MediaEntity data) {
+    public void onBind(RecyclerView.ViewHolder viewHolder, int RealPosition, final MediaEntity data) {
         if (viewHolder instanceof MediaAdapter.ViewHolder){
             MediaAdapter.ViewHolder vh = (ViewHolder) viewHolder;
             vh.tv_title.setText(data.name);
             vh.tv_time.setText(data.time);
+            vh.ll_item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    List<MediaEntity> mediaEntities = QueryMedia.showFileDir(data.path);
+                    if (mediaEntities != null){
+                        setDatas(mediaEntities);
+                    }
+                }
+            });
         }
     }
 
+
+    public void back(){
+        List<MediaEntity> mediaEntities = QueryMedia.showFileDir();
+        if (mediaEntities != null){
+            setDatas(mediaEntities);
+        }
+    }
 
     private class ViewHolder extends RecyclerView.ViewHolder{
         TextView tv_title;
         TextView tv_time;
         ImageView iv_play;
+        View ll_item;
         ViewHolder(View itemView) {
             super(itemView);
             tv_title = (TextView) itemView.findViewById(R.id.tv_title);
             tv_time = (TextView) itemView.findViewById(R.id.tv_time);
             iv_play = (ImageView) itemView.findViewById(R.id.iv_play);
+            ll_item = itemView.findViewById(R.id.ll_item);
         }
     }
 

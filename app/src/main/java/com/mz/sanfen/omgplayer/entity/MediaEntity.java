@@ -8,6 +8,7 @@ package com.mz.sanfen.omgplayer.entity;
 
 public class MediaEntity {
     public String name;
+    public String path;
     public String time;
     public int length;
     public int id;

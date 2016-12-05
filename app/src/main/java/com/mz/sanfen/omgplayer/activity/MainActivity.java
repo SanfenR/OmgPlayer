@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.adapter.MyFragmentPageAdapter;
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity {
 
     @AfterViews
     void initView(){
+
         mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), this);
         mList = new ArrayList<>();
 
