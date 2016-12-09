@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.adapter.MediaAdapter;
@@ -49,14 +50,21 @@ public class MediaFragment extends BaseFragment {
 
         View headerView = LayoutInflater.from(getActivity()).inflate(R.layout.header_file, null);
 
-
-
+        final TextView back = (TextView) headerView.findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });
         mAdapter.setHeaderView(headerView);
-
         rv_media.setAdapter(mAdapter);
         rv_media.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
-
-
+    @Override
+    public boolean back(){
+        mAdapter.back();
+        return true;
+    }
 }

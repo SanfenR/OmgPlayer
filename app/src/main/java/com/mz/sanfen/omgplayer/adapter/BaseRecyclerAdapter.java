@@ -64,10 +64,10 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
         if (datas != null){
             mDatas.clear();
             mDatas.addAll(datas);
-            notifyDataSetChanged();
         } else {
             mDatas.clear();
         }
+        notifyDataSetChanged();
     }
 
 

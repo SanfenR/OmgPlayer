@@ -10,6 +10,7 @@ import android.text.SpannableString;
 import android.text.style.ImageSpan;
 
 import com.mz.sanfen.omgplayer.R;
+import com.mz.sanfen.omgplayer.fragment.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    List<Fragment> mData = new ArrayList<>();
+    List<BaseFragment> mData = new ArrayList<>();
 
     private int[] mImageResId = {
             R.mipmap.menu_48px,
@@ -37,7 +38,7 @@ public class MyFragmentPageAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-    public void setData(List<Fragment> mData) {
+    public void setData(List<BaseFragment> mData) {
         this.mData = mData;
     }
 

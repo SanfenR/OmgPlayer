@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.mz.sanfen.omgplayer.R;
 import com.mz.sanfen.omgplayer.adapter.MyFragmentPageAdapter;
+import com.mz.sanfen.omgplayer.fragment.BaseFragment;
 import com.mz.sanfen.omgplayer.fragment.MediaFragment;
 import com.mz.sanfen.omgplayer.fragment.SettingFragment;
 import com.mz.sanfen.omgplayer.main.MainFragment;
@@ -30,9 +31,10 @@ public class MainActivity extends BaseActivity {
 
     MyFragmentPageAdapter mAdapter;
 
-    List<Fragment> mList;
+    List<BaseFragment> mList;
 
-    public static final String MAIN = "main";
+    private static final String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class MainActivity extends BaseActivity {
         mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), this);
         mList = new ArrayList<>();
 
+
         mList.add(MainFragment.newInstance());
         mList.add(MediaFragment.newInstance());
         mList.add(SettingFragment.newInstance());
@@ -55,4 +58,16 @@ public class MainActivity extends BaseActivity {
         tl_main.setTabMode(TabLayout.MODE_FIXED);
     }
 
+    @Override
+    public void onBackPressed() {
+        int position = tl_main.getSelectedTabPosition();
+
+        Log.e(TAG, "onBackPressed: " + position);
+
+        BaseFragment baseFragment = mList.get(position);
+
+        if (!baseFragment.back()){
+            super.onBackPressed();
+        }
+    }
 }
