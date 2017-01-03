@@ -1,8 +1,8 @@
 package com.mz.sanfen.omgplayer.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 
@@ -47,7 +47,6 @@ public class MainActivity extends BaseActivity {
         mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), this);
         mList = new ArrayList<>();
 
-
         mList.add(MainFragment.newInstance());
         mList.add(MediaFragment.newInstance());
         mList.add(SettingFragment.newInstance());
@@ -65,7 +64,6 @@ public class MainActivity extends BaseActivity {
         Log.e(TAG, "onBackPressed: " + position);
 
         BaseFragment baseFragment = mList.get(position);
-
         if (!baseFragment.back()){
             super.onBackPressed();
         }
